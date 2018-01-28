@@ -6,12 +6,12 @@ Thanks for taking the time to contribute! The following is a set of guidelines f
 
 [Code of Conduct](#code-of-conduct)
 
-[Installation & Getting Started](#getting-started)
+[Installation and Getting Started](#installation-and-getting-started)
 
 [How Can I Contribute?](#how-can-i-contribute)
+  * [Implementing Features](#implementing-features)
   * [Reporting Bugs](#reporting-bugs)
   * [Suggesting Enhancements](#suggesting-enhancements)
-  * [Your First Code Contribution](#your-first-code-contribution)
   * [Pull Requests](#pull-requests)
 
 [Java Styleguide](#java-styleguide)
@@ -22,7 +22,7 @@ Thanks for taking the time to contribute! The following is a set of guidelines f
 
 This project and everyone participating in it is governed by the [ACM-AITP-CoursePro Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [Matt Dzwonczyk](mailto:mgdzwonc@ncsu.edu).
 
-## Installation & Getting Started
+## Installation and Getting Started
 
 There are a few steps before one can begin developing on the CoursePro application:
 1. Install [java-jdk](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
