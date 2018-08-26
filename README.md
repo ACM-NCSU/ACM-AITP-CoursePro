@@ -1,18 +1,34 @@
-# electron-quick-start
+# ACM/AITP @ NCSU - CoursePro
 
-**Clone and run for a quick way to see Electron in action.**
+##### An application built *by* students, *for* students!  
 
-This is a minimal Electron application based on the [Quick Start Guide](https://electronjs.org/docs/tutorial/quick-start) within the Electron documentation.
+Create and organize all of your course resources in one easily accessible place.  
+The application will allow users to link their Google Calendar(s), create notes on the fly using Markdown,
+and ensure all of this is backed up into a single, easily portable format.
 
-**Use this app along with the [Electron API Demos](https://electronjs.org/#get-started) app for API code examples to help you get started.**
+The application is managed by the Officers and Members of the ACM/AITP Student organization at NC State.  
+To contribute to its development, please _fork_ the project, and create a pull request on the master branch/fork when
+ready. You can review documented tasks and feature requests on the following Trello page: {put here}.
+
+
+#### About
+
+The application is a NodeJS Electron Desktop App.  Electron is a Node based package which allows developers to create native desktop apps using web browser technologies.  This will allow for portability between different Operating Systems, while providing the ease of create UIs based on html/JavaScript.
+
+#### Getting Started
+
+Link to some ACM documentation, our coding practices/expectations. Where to find good examples in existing program (golden task from Trello)
+
+
+#### Getting Started (with Electron)
+
+Use this app along with the [Electron API Demos](https://electronjs.org/#get-started) app for API code examples to help you get started.
 
 A basic Electron application needs just these files:
 
 - `package.json` - Points to the app's main file and lists its details and dependencies.
 - `main.js` - Starts the app and creates a browser window to render HTML. This is the app's **main process**.
-- `index.html` - A web page to render. This is the app's **renderer process**.
-
-You can learn more about each of these components within the [Quick Start Guide](https://electronjs.org/docs/tutorial/quick-start).
+- `index.html` - A web page to render. This is the app's **renderer process**. (We use pug as a HTML/view engine as opposed to straight HTML files)
 
 ## To Use
 
@@ -22,7 +38,7 @@ To clone and run this repository you'll need [Git](https://git-scm.com) and [Nod
 # Clone this repository
 git clone https://github.com/electron/electron-quick-start
 # Go into the repository
-cd electron-quick-start
+cd CoursePro
 # Install dependencies
 npm install
 # Run the app

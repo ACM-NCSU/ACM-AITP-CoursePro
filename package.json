@@ -1,22 +1,28 @@
 {
-  "name": "electron-quick-start",
+  "name": "CoursePro",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "A Electron application built by students for students",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "postinstall": "install-app-deps"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
     "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "ACM",
+    "AITP",
+    "NCSU"
   ],
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^2.0.0"
+    "electron": "^2.0.0",
+    "electron-builder": "^20.28.2"
+  },
+  "dependencies": {
+    "electron-pug": "^2.0.0",
+    "pug": "^2.0.3",
+    "sqlite3": "^4.0.2"
   }
 }
