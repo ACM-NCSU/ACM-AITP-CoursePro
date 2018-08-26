@@ -1,0 +1,12 @@
+extends layout
+
+block append content
+    div.full
+      div.floater
+      div.center
+        p.white-text Select your CoursePro workspace to access your personal resources
+        form(name='workspace-form' onSubmit='JavaScript:setWorkspace(event)')
+          input.workspace(id="workspace" type="text")
+          input(type='submit' name='workspaceSubmit' value='Next')
+          
+      
