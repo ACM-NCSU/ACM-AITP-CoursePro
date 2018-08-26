@@ -1,4 +1,30 @@
-# ACM/AITP @ NCSU - CoursePro
+# ACM-AITP CoursePro
+
+The offical software application of ACM/AITP Student Organization at NC State.
+
+We have changed the infrastructure of our student software project. The prior direction was based upon java for its portability and relevance to NC State curriculum.
+
+However, recent experience with Nodejs and other supporting packages have shown many benefits in respect to user and development experience.  This also provides an opportunity for students to gain skills with technologies not fully covered in coursework.
+
+This commit divides to the two code bases.
+The following goals still apply.
+
+MVP features:
+* search bar for notes
+  - search
+    + by tag
+    + by date
+    + by text within note
+  - create note if it isn't found
+* calendar
+  - schedule
+  - tasking/todo
+  - link notes to creation date, any date tag
+* backup
+  - backup database and config to a designated place
+  - restore from backup
+
+# About CoursePro
 
 ##### An application built *by* students, *for* students!  
 
@@ -11,12 +37,13 @@ To contribute to its development, please _fork_ the project, and create a pull r
 ready. You can review documented tasks and feature requests on the following Trello page: {put here}.
 
 
-#### About
+#### About CoursePro Development
 
 The application is a NodeJS Electron Desktop App.  Electron is a Node based package which allows developers to create native desktop apps using web browser technologies.  This will allow for portability between different Operating Systems, while providing the ease of create UIs based on html/JavaScript.
 
 #### Getting Started
 
+TBD:
 Link to some ACM documentation, our coding practices/expectations. Where to find good examples in existing program (golden task from Trello)
 
 
