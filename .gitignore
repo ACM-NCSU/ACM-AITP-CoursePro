@@ -1,1 +1,4 @@
 node_modules
+src/db/.data/*
+
+!src/db/.data/.gitkeep

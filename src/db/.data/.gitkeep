@@ -1,0 +1,3 @@
+# This file is so the directory can remain in the project,
+# but the database file(s) created from development/use
+# won't be committed to the master branch.
