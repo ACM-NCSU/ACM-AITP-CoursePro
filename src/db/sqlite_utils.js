@@ -205,6 +205,7 @@ function run_cmd(db, cmd) {
 **/
 async function loadSchema(db) {
     await run_cmd(db, schema.TABLE_DEFS.WORKSPACES);
+    await run_cmd(db, schema.TABLE_DEFS.NOTES);
 }
 
 // Export function needed by external files
