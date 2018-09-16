@@ -12,6 +12,16 @@
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
+.sidenav-top {
+  height: 90%;
+  width: 20%;
+}
+
+.sidenav-bottom {
+  height: 10%;
+  width: 20%;
+}
+
 /* The navigation menu links */
 .sidenav-btn {
     padding: 2px 4px 4px 1px;
