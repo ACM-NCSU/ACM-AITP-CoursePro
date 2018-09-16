@@ -81,14 +81,14 @@ function loadSelectWS() {
     }))
 }
 
-function loadHome(workspace) {
+function loadHome() {
     mainWindow.loadURL(url.format({
       pathname: path.join(__dirname, 'views/home.pug'),
       protocol: 'file:',
       slashes: true
     }))
 
-    mainWindow.webContents.executeJavaScript(`createHomePage(\'Home\', \'${workspace}\')`);
+    mainWindow.webContents.executeJavaScript(`createPage(\'${locals.homePage}\')`);
 }
 
 function loadNotes() {
@@ -98,7 +98,7 @@ function loadNotes() {
       slashes: true
     }))
 
-    mainWindow.webContents.executeJavaScript(`createNotesPage(\'Notes\')`);
+    mainWindow.webContents.executeJavaScript(`createPage(\'${locals.notesPage}\')`);
 }
 
 
@@ -112,8 +112,8 @@ function loadNotes() {
 /**
     Called when "next" button is clicked after selecting workspace
 **/
-ipcMain.on('show-home', function(event, workspace) {
-    loadHome(workspace);
+ipcMain.on('show-home', function(event) {
+    loadHome();
 });
 
 /**
@@ -121,6 +121,13 @@ ipcMain.on('show-home', function(event, workspace) {
 **/
 ipcMain.on('show-notes', function(event) {
     loadNotes();
+});
+
+/**
+    Called when any page clicks "select workspace" button is clicked on sidebar
+**/
+ipcMain.on('select-workspace', function(event) {
+    loadSelectWS();
 });
 
 

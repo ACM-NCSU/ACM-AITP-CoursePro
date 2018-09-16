@@ -83,6 +83,9 @@ async function initialCheck(db) {
       Active, and last_used state are updated to true
 **/
 async function updateWorkspace(db, name) {
+    // First deactivate all workspaces
+    deactivate_workspace(db);
+
     let table = schema.TABLE_NAMES.WORKSPACES;
     // Insert new workspace if doesn't exist, otherwise update fields
     let stmt = `INSERT OR REPLACE INTO ${table} (name, active, last_used) ` +
@@ -98,15 +101,52 @@ async function updateWorkspace(db, name) {
     }
 }
 
+
+async function get_active_workspace(db) {
+    // Table defined, check for last workspace
+    let ws_chk = "SELECT name FROM " + schema.TABLE_NAMES.WORKSPACES +
+                 " WHERE active=true"
+    let ws_result = null;
+    try {
+        ws_result = await run_get(db, ws_chk);
+    } catch(error) {
+        console.log(error);
+        throw error;
+    }
+
+    console.log('last check result');
+    console.log(ws_result);
+
+    // If active workspace found, return it
+    if (typeof ws_result != 'undefined' && ws_result && ws_result.name) {
+        return ws_result.name;
+    }
+}
+
 /**
     Set the all active workspaces to false upon exit.
+
+    Used for more than just app close
 **/
-async function deactivate(db) {
+async function deactivate_workspace(db) {
     let table = schema.TABLE_NAMES.WORKSPACES;
-    // Insert new workspace if doesn't exist, otherwise update fields
+    // Set active workspace to false for all
     let stmt = `UPDATE ${table} SET active=false`;
     try {
         await run_cmd(db, stmt);
+    } catch(error) {
+        console.log(error);
+        throw error;
+    }
+}
+
+/**
+    Set the all active workspaces to false upon exit.
+    Then close DB
+**/
+function deactivate(db) {
+    try {
+        deactivate_workspace(db);
         db.close();
     } catch(error) {
         console.log(error);
