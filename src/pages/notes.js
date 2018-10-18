@@ -10,9 +10,9 @@
 const path = require("path");
 var common = require(path.resolve('src/common'));
 
-function createNotesPage(page) {
+function createNotesPage(page, workspace) {
     // Create Side bar menu
-    createNotesMenu(page);
+    createNotesMenu(page, workspace);
 
     // Create Welcome Message (if main content gets too complicated,
     // move to separate fucntion)
@@ -26,12 +26,11 @@ function createNotesPage(page) {
     welcome_div.appendChild(welcome_h3);
     welcome_div.appendChild(notes_in);
     main_div.appendChild(welcome_div);
-
 }
 
-function createNotesMenu(page) {
+function createNotesMenu(page, workspace) {
     // Set CoursePro title
-    common.addSidebarTitle(page);
+    common.addSidebarTitle(page, workspace);
 
     // Can uncomment when there is something to put
 
