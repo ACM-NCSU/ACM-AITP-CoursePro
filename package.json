@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
-    "scss": "node-sass --watch scss -o css",
+    "scss": "node-sass scss -o css && node-sass --watch scss -o css",
     "postinstall": "install-app-deps"
   },
   "repository": "https://github.com/electron/electron-quick-start",
