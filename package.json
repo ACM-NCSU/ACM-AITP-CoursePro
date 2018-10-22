@@ -4,10 +4,10 @@
   "description": "A Electron application built by students for students",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron .",
+    "test": "echo \"No test currently specified\"",
     "scss": "node-sass scss -o css && node-sass --watch scss -o css",
-    "postinstall": "install-app-deps"
+    "postinstall": "install-app-deps",
+    "start": "electron ."
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -20,11 +20,12 @@
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^2.0.8",
-    "electron-builder": "^20.28.2",
-    "node-sass": "^4.9.4"
+    "electron-builder": "^20.28.2"
   },
   "dependencies": {
     "electron-pug": "^2.0.0",
+     // node-sass can be a dev-dependency if compiled css is included in the package.
+    "node-sass": "^4.9.4",
     "pug": "^2.0.3",
     "sqlite3": "^4.0.2"
   }
