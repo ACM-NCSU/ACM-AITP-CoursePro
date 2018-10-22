@@ -16,7 +16,7 @@ The following goals still apply.
 Create and organize all of your course resources in one easily accessible place.
 The application will allow users to link their Google Calendar(s), create notes on the fly using Markdown, and ensure all of this is backed up into a single, easily portable format.
 
-## Installation
+## Installing
 
 To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer.
 
@@ -39,7 +39,7 @@ npm start
 
 *Note:* If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
 
-## Contribution
+## Contributing
 
 TBD:
 Link to some ACM documentation, our coding practices/expectations. Where to find good examples in existing program (golden task from Trello)
@@ -49,7 +49,7 @@ ready.
 
 You can review documented tasks and feature requests on the following Trello page: {put here}.
 
-## Understanding Electron
+### Understanding Electron
 
 Use this app along with the [Electron API Demos](https://electronjs.org/#get-started) app for API code examples to help you get started.
 
@@ -59,7 +59,7 @@ A basic Electron application needs just these files:
 - `main.js` - Starts the app and creates a browser window to render HTML. This is the app's **main process**.
 - `index.html` - A web page to render. This is the app's **renderer process**. (We use pug as a HTML/view engine as opposed to straight HTML files)
 
-### Resources for Learning Electron
+#### Resources for Learning Electron
 
 - [electronjs.org/docs](https://electronjs.org/docs) - All of Electron's documentation.
 - [electronjs.org/community#boilerplates](https://electronjs.org/community#boilerplates) - Sample starter apps created by the community.
@@ -76,7 +76,7 @@ A basic Electron application needs just these files:
 - [SASS](https://sass-lang.com/) - A CSS extension language, which allows for more intuitive nesting, more extensive variable use, simple loops, and more.
   - [Node-SASS](https://github.com/sass/node-sass) - A Node.js library which processes SASS/SCSS to CSS using [LibSass](https://github.com/sass/libsass)
 
-### MVP features
+## MVP Features
 
 - Search bar for notes
   - search
