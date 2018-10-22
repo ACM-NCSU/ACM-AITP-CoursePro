@@ -4,7 +4,9 @@
   "description": "A Electron application built by students for students",
   "main": "main.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
+    "scss": "node-sass --watch scss -o css",
     "postinstall": "install-app-deps"
   },
   "repository": "https://github.com/electron/electron-quick-start",
@@ -18,7 +20,8 @@
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^2.0.8",
-    "electron-builder": "^20.28.2"
+    "electron-builder": "^20.28.2",
+    "node-sass": "^4.9.4"
   },
   "dependencies": {
     "electron-pug": "^2.0.0",
