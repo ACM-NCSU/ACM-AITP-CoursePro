@@ -24,7 +24,6 @@
   },
   "dependencies": {
     "electron-pug": "^2.0.0",
-     // node-sass can be a dev-dependency if compiled css is included in the package.
     "node-sass": "^4.9.4",
     "pug": "^2.0.3",
     "sqlite3": "^4.0.2"
