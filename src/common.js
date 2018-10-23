@@ -17,10 +17,9 @@ function createElement(e, attrs) {
     Add a link "CoursePro" to the side bar (Top) to go back to home page
     workspace.  ASSUMES there is a div with ID: "<page>-sidenav-top"
 **/
-function addSidebarTitle(page) {
-
+function addSidebarTitle(page, workspace) {
     var sidebar_top = document.getElementById(page + '-sidenav-top');
-    var title = createElement('a', [['href', 'javascript:openHome()'],
+    var title = createElement('a', [['href', 'javascript:openHome("' + workspace + '")'],
                                     ['class', 'title-sidenav sidenav-btn button']]);
     var title_txt = document.createTextNode('CoursePro');
         title.appendChild(title_txt);

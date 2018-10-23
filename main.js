@@ -15,7 +15,8 @@ var db = db_utils.getDB();
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
 const locals = { homePage: 'Home',
-                 notesPage: 'Notes'};
+                 notesPage: 'Notes',
+                 workspace: null};
 
 
 /*******************************************************************
@@ -50,7 +51,7 @@ async function createWindow () {
     console.log('last');
     console.log(last_workspace);
 
-    if (last_workspace != null) {
+    if (last_workspace) {
         loadHome(last_workspace);
         await db_utils.updateWorkspace(db, last_workspace);
     }
@@ -81,24 +82,25 @@ function loadSelectWS() {
     }))
 }
 
-function loadHome() {
+function loadHome(workspace=null) {
     mainWindow.loadURL(url.format({
       pathname: path.join(__dirname, 'views/home.pug'),
       protocol: 'file:',
       slashes: true
     }))
-
-    mainWindow.webContents.executeJavaScript(`createPage(\'${locals.homePage}\')`);
+    locals.workspace = workspace;
+    mainWindow.webContents.executeJavaScript(`createPage(\'${locals.homePage}\', \'${locals.workspace}\')`);
 }
 
-function loadNotes() {
+function loadNotes(workspace=null) {
     mainWindow.loadURL(url.format({
       pathname: path.join(__dirname, 'views/notes.pug'),
       protocol: 'file:',
       slashes: true
     }))
+    locals.workspace = workspace;
 
-    mainWindow.webContents.executeJavaScript(`createPage(\'${locals.notesPage}\')`);
+    mainWindow.webContents.executeJavaScript(`createPage(\'${locals.notesPage}\', \'${locals.workspace}\')`);
 }
 
 
@@ -112,15 +114,15 @@ function loadNotes() {
 /**
     Called when "next" button is clicked after selecting workspace
 **/
-ipcMain.on('show-home', function(event) {
-    loadHome();
+ipcMain.on('show-home', function(event, workspace) {
+    loadHome(workspace);
 });
 
 /**
     Called when "notes" button is clicked on home sidebar
 **/
-ipcMain.on('show-notes', function(event) {
-    loadNotes();
+ipcMain.on('show-notes', function(event, workspace) {
+    loadNotes(workspace);
 });
 
 /**

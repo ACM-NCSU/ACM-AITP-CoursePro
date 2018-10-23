@@ -11,29 +11,27 @@ const path = require("path");
 var common = require(path.resolve('src/common'));
 
 
-function createHomePage(page) {
+function createHomePage(page, workspace) {
     // Create Side bar menu
-    createHomeMenu(page);
+    createHomeMenu(page, workspace);
 
     // Create Welcome Message (if main content gets too complicated,
     // move to separate fucntion)
     var main_div = document.getElementById(page + '-main');
     var welcome_div = common.createElement('div', [['align', 'center']]);
     var welcome_h3 = common.createElement('h3', []);
-    var welcome_txt = document.createTextNode('Welcome to CoursePro');
+    var welcome_txt = document.createTextNode('Welcome to CoursePro. You are in "' + workspace + '" workspace');
         welcome_h3.appendChild(welcome_txt);
 
     welcome_div.appendChild(welcome_h3);
     main_div.appendChild(welcome_div);
-
 }
 
-function createHomeMenu(page) {
+function createHomeMenu(page, workspace) {
     // Set CoursePro title
-    common.addSidebarTitle(page);
+    common.addSidebarTitle(page, workspace);
     var sidebar_top = document.getElementById(page + '-sidenav-top');
-
-    let link_list = [['Notes', 'javascript:openNotes()']];
+    let link_list = [['Notes', 'javascript:openNotes("' + workspace + '")']];
                       // ['Calendar', 'link'],
                       // ['Backup/Restore', 'link3']];
 

@@ -9,12 +9,12 @@ var db_utils = require(path.resolve('src/db/sqlite_utils'));
 var db = db_utils.getDB();
 
 
-function createPage(page, workspace=null) {
+function createPage(page, workspace) {
     if (page == 'Home') {
         pages.home.createHomePage(page, workspace);
     }
     else if (page == 'Notes') {
-        pages.notes.createNotesPage(page);
+        pages.notes.createNotesPage(page, workspace);
     }
 }
 
@@ -23,15 +23,15 @@ function setWorkspace(event) {
 
     let workspace = document.getElementById('workspace').value;
     db_utils.updateWorkspace(db, workspace);
-    openHome();
+    openHome(workspace);
 }
 
-function openHome() {
-    ipcRenderer.send('show-home');
+function openHome(workspace) {
+    ipcRenderer.send('show-home', workspace);
 }
 
-function openNotes() {
-    ipcRenderer.send('show-notes');
+function openNotes(workspace) {
+    ipcRenderer.send('show-notes', workspace);
 }
 
 function selectWS() {
