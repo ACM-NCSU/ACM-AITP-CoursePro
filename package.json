@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"No test currently specified\"",
-    "scss": "node-sass scss -o css && node-sass --watch scss -o css",
+    "scss": "echo \"Compiling SCSS from scratch.\" && rm -rf css/ && node-sass scss/ -o css/ && node-sass --watch scss/ -o css/",
     "postinstall": "install-app-deps",
     "start": "electron ."
   },
