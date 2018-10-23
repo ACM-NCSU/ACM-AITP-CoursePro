@@ -1,0 +1,73 @@
+/*
+This file contains all the general SCSS for CoursePro.
+
+More specialized SCSS should be a child of this SCSS file.
+For examples of good SCSS form and usage, look at the Bootstrap source code.
+*/
+
+/* Child Creation
+Create a new file named thus: Place _dummyScssFile.scss anywhere in the scss/ directory or any of its subdirectories.
+Import that child file (indicated by the initial underscore) thus: @import "dummyScssFile" in the beginning of any scss file where it is logical to do so.
+*/
+@import "variables";
+@import "sidenav";
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.main-content {
+  width: 80%;
+  height: 90%;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.floater {
+  height: 35%;
+}
+
+.footer {
+  position: fixed;
+  width: 80%;
+  height: 10%;
+  bottom: 0;
+  right: 0;
+}
+
+.full {
+  width: 100%;
+  height: 100%;
+  background-color: #111; /* Black*/
+}
+.center {
+  text-align: center;
+}
+
+.white-text {
+   color: #f1f1f1;
+}
+
+.workspace {
+    width: 20%;
+}
+
+.selectWS-btn {
+    position: absolute;
+    bottom: 0;
+    border-radius: 8px;
+    font-size: 10px;
+    background-color: #008CBA;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}

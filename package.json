@@ -4,8 +4,10 @@
   "description": "A Electron application built by students for students",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
-    "postinstall": "install-app-deps"
+    "test": "echo \"No test currently specified\"",
+    "scss": "echo \"Compiling SCSS from scratch.\" && rm -rf css/ && node-sass scss/ -o css/ && node-sass --watch scss/ -o css/",
+    "postinstall": "install-app-deps",
+    "start": "electron ."
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -22,6 +24,7 @@
   },
   "dependencies": {
     "electron-pug": "^2.0.0",
+    "node-sass": "^4.9.4",
     "pug": "^2.0.3",
     "sqlite3": "^4.0.2"
   }
