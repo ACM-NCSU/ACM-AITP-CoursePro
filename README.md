@@ -32,7 +32,7 @@ npm install
 # Run the post-install
 npm run postinstall
 # Compile the SCSS into CSS
-npm run postinstall
+npm run scss
 # Start the app
 npm start
 ```
