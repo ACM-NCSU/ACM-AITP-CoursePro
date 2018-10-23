@@ -1,60 +1,16 @@
-/* The side navigation menu */
-.sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 20%; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20px; /* Place content from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-}
+/*
+This file contains all the general SCSS for CoursePro.
 
-.sidenav-top {
-  height: 90%;
-  width: 20%;
-}
+More specialized SCSS should be a child of this SCSS file.
+For examples of good SCSS form and usage, look at the Bootstrap source code.
+*/
 
-.sidenav-bottom {
-  height: 10%;
-  width: 20%;
-}
-
-/* The navigation menu links */
-.sidenav-btn {
-    padding: 2px 4px 4px 1px;
-    text-decoration: none;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-    height: 5%;
-    width: 20%;
-}
-
-.title-sidenav {
-    font-size: 25px;
-    text-decoration: underline;
-}
-
-.item-sidenav {
-    font-size: 15px;
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidenav-btn:hover {
-    color: #f1f1f1;
-}
-
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-}
+/* Child Creation
+Create a new file named thus: Place _dummyScssFile.scss anywhere in the scss/ directory or any of its subdirectories.
+Import that child file (indicated by the initial underscore) thus: @import "dummyScssFile" in the beginning of any scss file where it is logical to do so.
+*/
+@import "variables";
+@import "sidenav";
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
