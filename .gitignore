@@ -1,6 +1,5 @@
 node_modules
 src/db/.data/*
-
 !src/db/.data/.gitkeep
 
 # Compiled SCSS. Should be compiled by developer upon creation.
